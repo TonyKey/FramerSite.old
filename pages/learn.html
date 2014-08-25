@@ -163,23 +163,37 @@ Subsequent imports from the same file will work as long as you don't rename laye
 
 #### Principles 
 
-1. Every *layer group* in Sketch/Photoshop will become a *layer* in Framer.
-2. Layer hierarchy is , eg: a subgroup will become a subLayer.
-3. Masked layer groups will become layers with clip enabled.
-4. Imported layers are accessible by importedLayers object: “importedLayers.myLayer”.
-5. Group names should be unique.
+- Every *layer group* in Sketch/Photoshop will become a *layer* in Framer.
+
+<img src="/static/images/target.png">
+
+- Layer hierarchy is respected, eg: a subgroup will become a subLayer.
+- Masked layer groups will become layers with clip enabled.
+
+<img src="/static/images/masking.png">
+
+- Imported layers are accessible by the importedLayers object: “importedLayers.myLayer”.
+- Group names should be unique.
 
 
 #### Gotchas 
 
-1. Only active documents will be imported.
-2. Before importing a document, it needs to be saved at least once.
-3. Layers are imported in a flat list. So, to access a layer named “ChildLayer” you write “importedLayers.ChildLayer” instead of “importedLayers.ParentLayer.ChildLayer”.
-4. When a layer group contains both other groups and other layers - the subgroups will be placed on top of the sublayers.
-5. To create a scrolling layer, ensure it contains a group that exceeds its size.
-6. In Sketch, all artboards are imported, but only the first one will be visible by default.
-7. In Sketch, you can only use one mask per layer group.
-8. In Sketch, make sure you have the elements you like to import don't have negative coordinates as they'll be hidden within Framer.
+- Only active documents will be imported.
+- Before importing a document, it needs to be saved at least once.
+- Layers are imported as a flat list. So, to access a layer named “ChildLayer” you write “importedLayers.ChildLayer” instead of “importedLayers.ParentLayer.ChildLayer”.
+
+<img src="/static/images/nesting.png">
+
+- When a layer group contains both other groups and other layers - the subgroups will be placed on top of the sublayers.
+- To create a scrolling layer, ensure it contains a group that exceeds its size.
+
+<img src="/static/images/scrolling.png">
+
+- In Sketch, all artboards are imported, but only the first one will be visible by default.
+- In Sketch, you can only use one mask per layer group.
+- In Sketch, make sure you have the elements you like to import don't have negative coordinates as they'll be hidden within Framer.
+
+<img src="/static/images/xandy.png">
 
 
 #### Compatibility:
