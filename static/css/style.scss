@@ -283,7 +283,7 @@ p + h6 {
 	color: #888;
 	list-style-type: circle; 
 	position: relative; left: 18px;
-	padding-left: 8px;
+	padding-left: 8px; font-weight:400;
 }
 
 #wrapper ul li+li {
@@ -296,6 +296,23 @@ p + h6 {
 	margin-top: 4px;
 }
 
+/*Numbered Lists*/
+
+#wrapper ol li {
+	line-height: 1.6;
+	font-size: 16px; font-weight:400;
+	color: #888;
+	position: relative; left: 20px;
+	padding-left: 8px;
+}
+
+#wrapper ol li+li {
+	margin-top:10px;
+}
+
+#wrapper ol {
+	margin-bottom:20px;
+}
 
 /* QUOTES -------------------------*/
 #wrapper.index h5 {

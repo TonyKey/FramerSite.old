@@ -453,7 +453,8 @@ p + h6 {
   list-style-type: circle;
   position: relative;
   left: 18px;
-  padding-left: 8px; }
+  padding-left: 8px;
+  font-weight: 400; }
 
 #wrapper ul li + li {
   margin-top: 4px; }
@@ -464,6 +465,22 @@ p + h6 {
   left: 0;
   line-height: 1.4;
   margin-top: 4px; }
+
+/*Numbered Lists*/
+#wrapper ol li {
+  line-height: 1.6;
+  font-size: 16px;
+  font-weight: 400;
+  color: #888;
+  position: relative;
+  left: 20px;
+  padding-left: 8px; }
+
+#wrapper ol li + li {
+  margin-top: 10px; }
+
+#wrapper ol {
+  margin-bottom: 20px; }
 
 /* QUOTES -------------------------*/
 #wrapper.index h5 {
@@ -1009,7 +1026,7 @@ footer.global a.coinbase-button {
   font-weight: 300;
   text-transform: none;
   margin-bottom: 20px;
-  font-size: 26px;
+  font-size: 20px;
   color: #333;
   letter-spacing: 0; }
 
