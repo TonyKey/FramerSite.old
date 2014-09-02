@@ -150,7 +150,7 @@ States are most useful when a layer has to be on the screen, but in multiple dif
 
 <hr>
 
-<!-- Generator -->
+<!-- Importing -->
 <a name="importing"></a>
 ### Importing
  
@@ -231,6 +231,44 @@ Subsequent imports from the same file will work as long as you don't rename laye
 
 </tbody>
 </table>
+<hr>
+
+<!-- Importing -->
+<a name="mirror"></a>
+### Mirror
+ 
+#### Overview
+
+Mirror allows you to preview your prototypes on any mobile device. All opened documents are hosted on a built-in webserver.
+Anyone on the same network can see your project. Your document gets refreshed on every save.
+
+
+
+We've made it easier to open the URL on your mobile device, by implementing a share sheet that allows you to quickly send the link via message or email.
+
+<img src="/static/images/toolbar.png">
+
+
+
+For previewing on iOS, the project template includes the **minimal-ui** meta tag, but to get as little chrome as possible, it's best to add your prototype to your homescreen. 
+
+To see all of your active documents, go to the root of the webserver, which looks like this: **http://190.160.40.80:8000**. Simply remove your project name from the URL to get there.
+
+
+<img src="/static/images/projects.png">
+
+To save your prototype for offline (cached) viewing, add **/offline.html** to the URL. Note: this does not work well with auto-refreshing.
+
+
+#### Gotchas
+
+* If you change networks, you may need to restart Framer Studio
+* The meta tag "initial scale" is set to 0.5 by default
+* To make it work over USB, see this [tethering trick](http://bjango.com/help/skalapreview/connection/)
+
+
+
+
 <hr>
 
 <!-- CoffeeScript -->
