@@ -255,7 +255,7 @@ To see all of your active documents, go to the root of the webserver. Simply rem
 
 - You can add your project to your Homescreen by tapping the Share button and then "Add to Home Screen". We added uniquely colored icon for your project by default.
 
-- The project template includes the [minimal-ui](http://blogging.alastair.is/minimal-ui-on-ios7-1/) meta-tag, but to get as little chrome as possible, it's best to add your prototype to your homescreen. 
+- To get a true fullscreen experience for your prototype, use something like [FSMirror](https://github.com/joshpuckett/FSMirror). iOS specific tags like minimal-ui and apple-mobile-web-app-capable are disabled by default because they have issues. See gotchas for more info.
 
 #### For all devices
 
@@ -272,7 +272,17 @@ To see all of your active documents, go to the root of the webserver. Simply rem
 
 - If Framer Studio can't use Port 8000 it will try to use the next available Port (8001, 8002 etc).
 
+- The minimal-ui viewport tag is deprecated in iOS8 and [throws an error on desktop](http://visuellegedanken.de/2014-03-18/a-follow-up-on-the-minimal-ui-viewport-meta-tag) so it's not enabled by default.
 
+- The apple-mobile-web-app-capable tag has a bug where consequent launches can [freeze your phone](http://stackoverflow.com/questions/12680909/ipad-web-app-freezes-on-startup) so it's not enabled by default. It seems to be fixed in iOS8.
+
+#### Troubleshooting
+
+If the your device can't find the server on the network
+
+1. Double check if both devices are on the same network
+2. Try to use you local dns name rather than the IP address. Look it up in System Preferences > Sharing. It should look something like http://my-computer.local:8000/MyProject.framer
+3. Check if you network firewall is blocking traffic on ports 8000-9000
 
 <hr>
 
